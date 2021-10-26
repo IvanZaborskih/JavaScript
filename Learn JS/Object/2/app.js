@@ -42,30 +42,30 @@
 
 
 // Вложенное клонирование
-let user = {
-    name: 'Ivan',
-    age: 22,
-    sizes: {
-        height: 180,
-        wieght: 60,
-    },
-};
-console.log(user.sizes.height);
+// let user = {
+//     name: 'Ivan',
+//     age: 22,
+//     sizes: {
+//         height: 180,
+//         wieght: 60,
+//     },
+// };
+// console.log(user.sizes.height);
 
-// let clone = Object.assign({}, user);   //  скопирует неправильно, объект останется ссылкой на тот же
-let clone = {};
-for (let key in user) {
-    if (typeof user[key] == 'object') {
-        clone[key] = Object.assign({}, user[key]);
-    } else {
-        clone[key] = user[key];
-    }
-} // скопирует как надо, склонировав объект
+// // let clone = Object.assign({}, user);   //  скопирует неправильно, объект останется ссылкой на тот же (Простое клонирование)
+// let clone = {};
+// for (let key in user) {
+//     if (typeof user[key] == 'object') {
+//         clone[key] = Object.assign({}, user[key]);
+//     } else {
+//         clone[key] = user[key];
+//     }
+// } // скопирует как надо, склонировав объект (Глубокое клонирование)
 
-clone.name = 'Goga';
-user.sizes.wieght = 100;
+// clone.name = 'Goga';
+// user.sizes.wieght = 100;
 
-console.log('--------------------');
-console.log(user);
-console.log(clone);
-console.log(user.sizes === clone.sizes);
+// console.log('--------------------');
+// console.log(user);
+// console.log(clone);
+// console.log(user.sizes === clone.sizes);
