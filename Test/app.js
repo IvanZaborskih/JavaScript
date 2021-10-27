@@ -1,29 +1,11 @@
-function DNAStrand(dna) {
-    let dnaArray = dna.split('');
+const removeExclamationMarks = (s) => s.split('').filter((n) => n != '!').join('');
 
-    for (let i = 0; i < dnaArray.length; i++) {
-        switch (dnaArray[i]) {
-            case 'T':
-                dnaArray[i] = 'A';
-                break;
-            case 'A':
-                dnaArray[i] = 'T';
-                break;
-            case 'C':
-                dnaArray[i] = 'G';
-                break;
-            case 'G':
-                dnaArray[i] = 'C';
-                break;
-        }
-    }
+// function removeExclamationMarks(s) {
+//     let arr = s.split("");
+//     arr = arr.filter(function (n) {
+//         return n !== "!";
+//     })
+//     return arr.join("");
+// }
 
-    return dnaArray.join('');
-}
-
-console.log(DNAStrand("ATTGC"));
-
-// C -> G
-// A -> T
-// T -> A
-// G -> C
+console.log(removeExclamationMarks('Hello World!'));
