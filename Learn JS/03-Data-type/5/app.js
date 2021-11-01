@@ -222,13 +222,95 @@ arr.slice([start], [end])
 
 
 // Трансформировать в массив имён
-let users = [
-    { name: "Вася", age: 25 },
-    { name: "Петя", age: 30 },
-    { name: "Маша", age: 28 }
-]
+// let users = [
+//     { name: "Вася", age: 25 },
+//     { name: "Петя", age: 30 },
+//     { name: "Маша", age: 28 }
+// ]
+// let names = users.map(item => item.name);
+// console.log(names);
 
-let names = users.filter(item => item.name);
-console.log(names);
+
+// Трансформировать в объекты
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+// let users = [vasya, petya, masha];
+
+// let usersMapped = users.map(user => ({
+//     fullName: `${user.name} ${user.surname}`,
+//     id: user.id,
+// }));
+// console.log(usersMapped);
+// console.log(users);
+// console.log(usersMapped[0].id) // 1
+// console.log(usersMapped[0].fullName) // Вася Пупкин
 
 
+// Отсортировать пользователей по возрасту
+// function sortByAge(arr) {
+//     arr.sort((a, b) => a.age > b.age ? 1 : -1);
+// }
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+// let arr = [vasya, petya, masha];
+// sortByAge(arr);
+// console.log(arr[0].name); // Вася
+// console.log(arr[1].name); // Маша
+// console.log(arr[2].name); // Петя
+
+
+// Перемешайте массив
+// function shuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
+
+//         // поменять элементы местами
+//         // мы используем для этого синтаксис "деструктурирующее присваивание"
+//         // подробнее о нём - в следующих главах
+//         // то же самое можно записать как:
+//         // let t = array[i]; array[i] = array[j]; array[j] = t
+//         [array[i], array[j]] = [array[j], array[i]];
+//     }
+// }
+// let arr = [1, 2, 3];
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+// shuffle(arr);
+// console.log(arr);
+
+
+// Получить средний возраст
+// function getAverageAge(arr) {
+//     let sumAges = arr.reduce((averageAge, item) => {
+//         return averageAge += item.age;
+//     }, 0);
+
+//     return sumAges / arr.length;
+// }
+// let vasya = { name: "Вася", age: 10 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 20 };
+// let arr = [vasya, petya, masha];
+// console.log(getAverageAge(arr));
+
+
+// Оставить уникальные элементы массива
+// function unique(arr) {
+//     let unique = [];
+//     for (let elem of arr) {
+//         if (!unique.includes(elem)) {
+//             unique.push(elem);
+//         }
+//     }
+
+//     return unique;
+// }
+// let strings = [":-O", "кришна", "кришна", "харе", "харе",
+//     "харе", "харе", "кришна", "кришна"
+// ];
+// console.log(unique(strings)); // кришна, харе, :-O
