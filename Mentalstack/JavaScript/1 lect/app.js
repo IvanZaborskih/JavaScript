@@ -103,7 +103,7 @@
 // console.log(w);      // 100
 // console.log(h);      // 200
 
-//          (3.2) Остаток объекта
+//          (3.1) Остаток объекта
 // let options = {
 //     title: 'Menu',
 //     width: 100,
@@ -116,7 +116,7 @@
 // console.log(rest.height);  // 200
 // console.log(rest.width);   // 100
 
-//          (3.3) Вложенная деструктуризация объектов
+//          (3.2) Вложенная деструктуризация объектов
 // let options = {
 //     size: {
 //         width: 100,
@@ -177,7 +177,7 @@
 // map.set("1", "str1").set(1, "num1").set(true, "bool1");
 // console.log(map);
 
-//          (5.2) Перебор Map
+//          (5.1) Перебор Map
 // let recipeMap = new Map([
 //     ['огурец', 500],
 //     ['картошка', 400],
@@ -200,7 +200,7 @@
 //     console.log(`${key}: ${value}`);
 // });
 
-//          (5.3) Set
+//          (5.2) Set
 // let set = new Set();
 // let ivan = { name: 'Ivan' };
 // let liza = { name: 'Liza' };
@@ -215,7 +215,7 @@
 //     console.log(user);
 // }
 
-//          (5.4) Перебор объекта Set
+//          (5.3) Перебор объекта Set
 // let set = new Set(["апельсин", "яблоко", "банан"]);
 // for (let elem of set) {
 //     console.log(elem);
