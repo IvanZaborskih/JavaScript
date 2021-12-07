@@ -20,7 +20,6 @@
 // }
 // console.log(showName("Юлий", "Цезарь", "Консул", "Император"));
 
-
 //          (1.1) Оператор расширения
 // let arr = [3, 5, 1];
 // console.log(Math.max(...arr)); // 5
@@ -32,6 +31,7 @@
 
 // let str = 'Hello, World';
 // console.log([...str]);
+
 
 
 //          (2) Деструктуризация массивов
@@ -68,6 +68,7 @@
 // let [firstName = 'Ivan', secondName = 'Gogin'] = ['Goga'];
 // console.log(firstName);
 // console.log(secondName);
+
 
 
 //          (3) Деструктуризация объектов
@@ -139,6 +140,7 @@
 // console.log(item2);  // Donut
 
 
+
 //          (4) Копирование объектов
 //          (4.1) Поверхностное копирование
 // const itemInCart = [
@@ -158,9 +160,94 @@
 
 
 //          (5) Map & Set
+// let map = new Map();
+// map.set('1', 'str1');
+// map.set(1, 'num1');
+// map.set(true, 'boolean');
+// console.log(map.get(1));
+// console.log(map.get('1'));
+// console.log(map.size);
+
+// let john = { name: 'John' };
+// let visitCountMap = new Map();
+// visitCountMap.set(john, 123);
+// console.log(visitCountMap.get(john));
+
+// let map = new Map();
+// map.set("1", "str1").set(1, "num1").set(true, "bool1");
+// console.log(map);
+
+//          (5.2) Перебор Map
+// let recipeMap = new Map([
+//     ['огурец', 500],
+//     ['картошка', 400],
+//     ['лук', 150]
+// ]);
+// // перебор по ключам (овощи)
+// for (let vegetable of recipeMap.keys()) {
+//     console.log(vegetable);
+// }
+// // перебор по значениям (числа)
+// for (let amount of recipeMap.values()) {
+//     console.log(amount);
+// }
+// // перебор по элементам в формате [ключ, значение]
+// for (let entry of recipeMap.entries()) {
+//     console.log(entry);
+// }
+// // выполняем функцию для каждой пары (ключ, значение)
+// recipeMap.forEach((value, key, map) => {
+//     console.log(`${key}: ${value}`);
+// });
+
+//          (5.3) Set
+// let set = new Set();
+// let ivan = { name: 'Ivan' };
+// let liza = { name: 'Liza' };
+// let goga = { name: 'Goga' };
+// set.add(ivan);
+// set.add(liza);
+// set.add(goga);
+// set.add(goga);
+// set.add(ivan);
+// console.log(set.size); // 3
+// for (let user of set) {
+//     console.log(user);
+// }
+
+//          (5.4) Перебор объекта Set
+// let set = new Set(["апельсин", "яблоко", "банан"]);
+// for (let elem of set) {
+//     console.log(elem);
+// }
+// set.forEach((value, valueAgain, set) => {
+//     console.log(value);
+// });
 
 
 
+//          (6) Методы массивов
+//          (6.1) forEach
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.forEach((num) => {
+//     console.log('Квадрат числа равен: ' + Math.pow(num, 2));
+// });
+
+//          (6.2) map
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// // сделаем массив квадратов
+// const squares = nums.map((num) => {
+//     return num * num;
+// });
+// console.log(nums);
+// console.log(squares);
+
+//          (6.3) reduce/reduceRight
+// let arr = [1, 2, 1, 2, 1, 2];
+// let result = arr.reduce((sum, currentItem) => {
+//     return sum += currentItem;
+// }, 0);
+// console.log(result);
 
 
 
